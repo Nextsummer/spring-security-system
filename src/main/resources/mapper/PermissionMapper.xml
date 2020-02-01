@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exam.mapper.PermissionMapper">
+    <select id="findByPermissionId" resultType="com.exam.entity.Permission">
+        select per.* from role_permission rp,permission per where rp.permission_id = per.id and rp.role_id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exam.mapper.RoleMapper">
+    <select id="findByRoleId" resultType="com.exam.entity.Role">
+        select role.id,role.keyword,role.name from role,user_role ur where ur.role_id = role.id and ur.user_id = #{userId}
+    </select>
+</mapper>
